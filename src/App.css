@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    padding-top: 14rem;
+}
+
+.teams {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+}

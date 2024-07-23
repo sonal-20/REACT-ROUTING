@@ -1,0 +1,14 @@
+.signup-container {
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.registraionBtn {
+    margin-left: 5px;
+}
+

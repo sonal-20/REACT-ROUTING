@@ -1,0 +1,15 @@
+.login-container {
+    padding: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+   
+}
+.loginBtn{
+    
+}
+ .signupBtn {
+    margin-left: 5px;
+ }
