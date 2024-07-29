@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import classNames from "classnames";
+import CustomModal from "./Modal";
 
 const Home = (props) => {
-  console.log("-------------props", props);
   const teamArray = [
     {
       id: 1,
@@ -37,17 +39,35 @@ const Home = (props) => {
       mermber: ["abc", "xyz", "pqr", "er"],
     },
   ];
+  const [show, setShow] = useState(false);
+  const [teamDeatils, setTeamDeatils] = useState({});
   return (
     <div>
+      <CustomModal
+        show={show}
+        teamName={teamDeatils?.teamName}
+        handleClose={() => setShow(false)}
+        handleAction={() => setShow(false)}
+      />
       <div className="component">
         <h1>Team list</h1>
       </div>
       <div className="teams">
         {teamArray.map((team) => (
-          <div key={team.id}>
+          <div key={team.id} className="mb-3">
             <span>
               <Link to={`/details/${team.id}`}>{team.teamName}</Link>
             </span>
+            <Button
+              variant="primary"
+              className={classNames("ml-2")}
+              onClick={() => {
+                setTeamDeatils(team);
+                setShow(!show);
+              }}
+            >
+              Delete
+            </Button>
           </div>
         ))}
       </div>

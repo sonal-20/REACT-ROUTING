@@ -27,7 +27,7 @@ const Layout = () => {
           className="loginBtn"
           variant="primary"
           onClick={() => {
-            localStorage.setItem("isLogged", "false");
+            localStorage.setItem("isLoggedIn", "false");
             navigateTo("/");
           }}
         >

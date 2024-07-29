@@ -21,7 +21,7 @@ const Login = () => {
       console.log("----", isExist);
       setShow(isExist);
       if (isExist) {
-        localStorage.setItem("isLogged", "true");
+        localStorage.setItem("isLoggedIn", "true");
         navigateTo("/home");
       }
     }
