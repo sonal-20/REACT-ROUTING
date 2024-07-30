@@ -1,0 +1,33 @@
+.home{
+    background-image: url('https://weekplan-www.s3.amazonaws.com/image4-43.png');
+    /* background-image: url('/background.jpg'); Path to your image */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 70vh; /* Full viewport height */
+  width: 60%; /* Full width */
+  display: flex; /* Use flexbox for easy centering of content */
+  justify-content: right; /* Center horizontally */
+  align-items: right; /* Center vertically */
+  color: white; /* White text color for contrast */
+  text-align: center; /* Centered text */
+  margin-top: 150px;
+  margin-left: 290px;
+}
+.heading{
+/*   
+  padding-bottom: 90%;
+   margin-right: 250px; 
+   color: rgb(44, 24, 76);
+  position: absolute; /* Absolute positioning within the relative parent */
+
+  color: rgb(44, 24, 76);
+  position: absolute; /* Absolute positioning within the relative parent */
+  top: 0; /* Align to the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to perfect horizontal center */
+  margin: 20px 0;
+  padding-top: 90px; 
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Col, Form, Row, Button, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
@@ -15,14 +15,14 @@ const Login = () => {
     if (email.trim().length && password.trim().length) {
       const usersInfo = JSON.parse(existingUsersLocal);
       console.log(usersInfo);
-      const isExist = usersInfo.some(
+      const isExist = usersInfo?.some(
         (user) => user.email === email && user.password === password
       );
       console.log("----", isExist);
       setShow(isExist);
       if (isExist) {
         localStorage.setItem("isLoggedIn", "true");
-        navigateTo("/home");
+        navigateTo("/Teams");
       }
     }
   };
@@ -39,6 +39,7 @@ const Login = () => {
             Invalid credentials
           </Alert>
         )}
+        <h3 className="text-center mb-2">Login</h3>
         <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
           <Form.Label column sm="2">
             Email

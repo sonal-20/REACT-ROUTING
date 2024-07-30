@@ -1,30 +1,21 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
-
+import { Button, Nav } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 const Layout = () => {
   const navigateTo = useNavigate();
+  const location = useLocation();
   return (
-    <div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/blogs">Blogs</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="/details/123">Go to details</Link>
-              {/* <button onClick={redirect}>Redirct to Hom</button> */}
-            </li>
-          </ul>
-        </nav>
+    <div className="bg-light border-right" id="sidebar">
+      
+      <Nav className="flex-row justify-content-end pt-3 pb-3 mr-1 ">
+        {/* <Nav.Link href="/home">Teams</Nav.Link> */}
+        <Nav.Link id="logo" href="">Todo-App</Nav.Link>
+        <Nav.Link href="/Teams" className={location.pathname === '/Teams' ? 'active' : ''}>Teams</Nav.Link>
+        
+        <Nav.Link href="/projects" className={location.pathname==='/projects' ? 'active' : ''}>Project</Nav.Link>
+        <Nav.Link href="/details/123" className={location.pathname === '/details/123' ? 'active' : ''}>Go to details</Nav.Link>
         <Button
-          className="loginBtn"
+          className="logoutBtn"
           variant="primary"
           onClick={() => {
             localStorage.setItem("isLoggedIn", "false");
@@ -33,8 +24,7 @@ const Layout = () => {
         >
           Logout
         </Button>
-      </div>
-      <Outlet />
+      </Nav>
     </div>
   );
 };

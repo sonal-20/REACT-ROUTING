@@ -1,0 +1,23 @@
+
+
+#sidebar{
+    font-size: 25px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+ 
+  }
+.nav-link:hover{
+    background-color: #cadbed;
+}
+.nav-link{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#logo{
+    color: black;
+    margin-right:800px;
+    font-size: 40px;
+}

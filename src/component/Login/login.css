@@ -1,10 +1,10 @@
-.login-container {
+/* .login-container {
     padding: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    font-size: 20px;
    
 }
 .loginBtn{
@@ -12,4 +12,53 @@
 }
  .signupBtn {
     margin-left: 5px;
- }
+ } */
+
+/* Container for the login form */
+.login-container {
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 50px auto; /* Center the form horizontally and add some top margin */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Add a border to the form */
+    border-radius: 10px; /* Round the corners of the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #fff; /* White background for the form */
+  }
+  
+  /* Header styling */
+  h3 {
+    color: #333; /* Darker color for the header */
+  }
+  
+  /* Styling for error messages */
+  .error-message {
+    color: red; /* Red color for error messages */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    margin-top: 5px; /* Small margin on top */
+  }
+  
+  /* Button styling */
+  .loginBtn, .signupBtn {
+    width: 100%; /* Full width buttons */
+    margin-top: 10px; /* Add margin on top */
+    padding: 10px; /* Add padding inside the buttons */
+  }
+  
+  .loginBtn {
+    background-color: #007bff; /* Primary color for login button */
+    border: none; /* Remove border */
+  }
+  
+  .signupBtn {
+    background-color: #6c757d; /* Secondary color for signup button */
+    border: none; /* Remove border */
+  }
+  
+  /* Button hover effects */
+  .loginBtn:hover, .signupBtn:hover {
+    opacity: 0.9; /* Slightly decrease opacity on hover */
+  }
+  
+ .mb-3{
+   font-size: 20px;
+  }
